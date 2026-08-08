@@ -1,0 +1,338 @@
+/* --- Global Styles & Reset --- */
+*
+    { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #1a1a1a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    font-size: 1.3rem;
+    color: #ff5722;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff5722;
+}
+
+/* --- Hero Section --- */
+header {
+    height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('home-bg.jpg') center/cover no-repeat;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* --- Menu Section Styling --- */
+.menu {
+    padding: 60px 8%;
+    background: #ffffff;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #222;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    font-size: 1.15rem;
+    margin: 15px 15px 5px 15px;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* --- Contact Section Styling --- */
+.contact {
+    padding: 60px 8%;
+    background: #fdfdfd;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #ff5722;
+}
+
+.contact-form button {
+    width: 100%;
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #e64a19;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+/* --- Additional Homepage Styles --- */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 50px 8%;
+    background: #fff;
+}
+
+.feature-card {
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #ff5722;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.gallery-section {
+    padding: 60px 8%;
+    background: #f9f9f9;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.gallery-item h4 {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.info-section {
+    padding: 60px 8%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 300px;
+    background: #fdfdfd;
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 5px solid #ff5722;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.info-box h3 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.3rem;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* --- Modern Cohesive Card Design --- */
+.menu-card, .feature-card, .contact-info, .contact-form {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-top: 4px solid #ff5722; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.menu-card:hover, .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.15);
+    border-color: #ff5722;
+}
